@@ -12,6 +12,8 @@
     "@react-spring/three": "^9.7.3",
     "@react-three/drei": "^9.93.1",
     "@react-three/fiber": "^8.15.14",
+    "framer-motion": "^10.18.0",
+    "gsap": "^3.12.5",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
