@@ -28,15 +28,10 @@ export const Texts = (props: any) => {
 const GeoText = () => {
   const ref = useRef<Mesh>(null!);
   const router = useRouter();
-  const { isTransition, setIsTransition } = useAppContext();
-  // const { scale } = useSpring({
-  //   scale: isTransition ? 1.05 : 1,
-  //   config: config.wobbly,
-  // });
   return (
     <>
       <Rig />
-      <animated.mesh ref={ref}>
+      {/* <animated.mesh ref={ref}>
         <Texts
           position={[-4, 6.9, 0]}
           text={'Profile'}
@@ -61,9 +56,9 @@ const GeoText = () => {
         text={'Contact'}
         fontSize={0.35}
         onClick={() => router.push('/contact')}
-      />
-      <Texts position={[-1.3, -1.9, 1]} text={'Sena Inomata'} fontSize={1.2} />
-      <Texts position={[-2.7, -3.3, 1]} text={'Portfolio'} fontSize={1.2} />
+      /> */}
+      <Texts position={[0, -0.8, 1]} text={'Sena Inomata'} fontSize={1.2} />
+      <Texts position={[-1.4, -2.2, 1]} text={'Portfolio'} fontSize={1.2} />
     </>
   );
 };

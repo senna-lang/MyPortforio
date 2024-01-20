@@ -15,12 +15,12 @@ const GeoStars = () => {
 
   return (
     <>
-      <group ref={starRef} position={[250, -200, -500]}>
+      <group ref={starRef} position={[0, 270, -500]}>
         <Stars count={7000} radius={30} factor={7}/>
       </group>
-      <group position={[0, 0, 0]}>
+      {/* <group position={[0, 0, 0]}>
         <Stars factor={4} fade speed={0.5} />
-      </group>
+      </group> */}
     </>
   );
 };
