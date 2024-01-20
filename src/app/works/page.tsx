@@ -3,6 +3,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
 import Link from 'next/link';
 import Header from '../components/Header';
+import Image from 'next/image';
 
 export default function Works() {
   return (
@@ -12,14 +13,6 @@ export default function Works() {
           <Link href="/" className=" text-xl font-extrabold ">
             SENNA_lang
           </Link>
-        </div>
-        <div>
-          {/* <Image
-                src="/9803D0FA-E299-4F31-89B7-89D54B569EB4.jpeg"
-                alt="profileImg"
-                width={400}
-                height={400}
-              /> */}
         </div>
         <Link href="/" className="mt-5">
           <span className="block text-5xl">Sena Inomata</span>
@@ -39,6 +32,40 @@ export default function Works() {
       </div>
       <div className="bg-[#01060f] w-2/3 h-screen">
         <Header />
+        <div className=" flex flex-col justify-center mt-36 mx-24 p-8 text-slate-300">
+          <div className=" mb-10">
+            <h1 className=" text-5xl">Works</h1>
+          </div>
+          <div className="grid grid-cols-3 gap-2">
+            <div className=' bg-white'>
+              <Image
+                src="https://placehold.jp/350x260.png"
+                alt="worksImg"
+                width={350}
+                height={260}
+              />
+              <div>
+            
+              </div>
+            </div>
+            <div>
+              <Image
+                src="https://placehold.jp/350x260.png"
+                alt="worksImg"
+                width={350}
+                height={260}
+              />
+            </div>
+            <div>
+              <Image
+                src="https://placehold.jp/350x260.png"
+                alt="worksImg"
+                width={350}
+                height={260}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
