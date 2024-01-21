@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import '@mantine/core/styles.css';
 import { AppProvider } from '@/context/AppContext';
 import TransitionWrapper from './TransitionWrapper';
 import { Roboto } from 'next/font/google';
+import { MantineProvider,ColorSchemeScript } from '@mantine/core';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,9 +24,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
+      <head>
+        <ColorSchemeScript/>
+      </head>
       <body className={roboto.className}>
         <TransitionWrapper>
-          <AppProvider>{children}</AppProvider>
+          <AppProvider>
+            <MantineProvider>{children}</MantineProvider>
+          </AppProvider>
         </TransitionWrapper>
       </body>
     </html>
