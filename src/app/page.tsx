@@ -34,14 +34,14 @@ export default function Home() {
           />
         </div>
         <div className="flex gap-8 fixed bottom-6">
-          <Link href="https://github.com/senna-lang">
+          <Link href="https://github.com/senna-lang" target="_blank">
             <FaGithub className=" text-2xl cursor-pointer" />
           </Link>
           <Link href="/">
-            <FaXTwitter className=" text-2xl cursor-pointer" />
+            <FaXTwitter className=" text-2xl cursor-pointer" target="_blank" />
           </Link>
           <Link href="/">
-            <FaInstagram className=" text-2xl cursor-pointer" />
+            <FaInstagram className=" text-2xl cursor-pointer" target="_blank" />
           </Link>
         </div>
       </div>

@@ -19,13 +19,13 @@ export default function Profile() {
           <span className="block text-5xl">Portfolio</span>
         </Link>
         <div className="flex gap-8 fixed bottom-6">
-          <Link href="https://github.com/senna-lang">
+          <Link href="https://github.com/senna-lang"  target="_blank">
             <FaGithub className=" text-2xl cursor-pointer" />
           </Link>
-          <Link href="/">
+          <Link href="/"  target="_blank">
             <FaXTwitter className=" text-2xl cursor-pointer" />
           </Link>
-          <Link href="/">
+          <Link href="/"  target="_blank">
             <FaInstagram className=" text-2xl cursor-pointer" />
           </Link>
         </div>
@@ -46,8 +46,9 @@ export default function Profile() {
               <div className="mb-4">
                 <h1 className=" text-5xl">Profile</h1>
               </div>
-              <p className=' mb-3'>
-                私は長野県住在の24歳、猪又星南と申します。<br/>
+              <p className=" mb-3">
+                私は長野県住在の24歳、猪又星南と申します。
+                <br />
                 常に挑戦し続ける人生にしたいという思いから約二年間務めたゼネコンを退職し、現在WEBエンジニアを目指して就職活動をしています。
                 もともとプログラミングについての知識は全く無くゼロからのスタートでしたが、私の性格上一つのことを突き詰めて研鑽していく作業が好きで、得意分野だと思っているので、
                 仕事をしながら勉強していくことも苦ではありませんでした。

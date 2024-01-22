@@ -18,13 +18,13 @@ export default function Skill() {
           <span className="block text-5xl">Portfolio</span>
         </Link>
         <div className="flex gap-8 fixed bottom-6">
-          <Link href="https://github.com/senna-lang">
+          <Link href="https://github.com/senna-lang" target="_blank">
             <FaGithub className=" text-2xl cursor-pointer" />
           </Link>
-          <Link href="/">
+          <Link href="/" target="_blank">
             <FaXTwitter className=" text-2xl cursor-pointer" />
           </Link>
-          <Link href="/">
+          <Link href="/" target="_blank">
             <FaInstagram className=" text-2xl cursor-pointer" />
           </Link>
         </div>
@@ -32,16 +32,14 @@ export default function Skill() {
       <div className="bg-[#01060f] w-2/3 h-screen">
         <Header />
         <div className=" flex flex-col justify-center mt-36 mx-24 p-8 text-slate-300">
-          <div className=' mb-10'>
+          <div className=" mb-10">
             <h1 className=" text-5xl">Skill set</h1>
           </div>
           <div className=" flex gap-12 mb-1">
             <h2>Language</h2>
             <ul className=" flex gap-3">
               <li>
-                <Link href="/">
-                  Javascript
-                </Link>
+                <Link href="/">Javascript</Link>
               </li>
               <li> Typescript</li>
             </ul>

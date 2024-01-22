@@ -26,13 +26,13 @@ export default function Contact() {
           <span className="block text-5xl">Portfolio</span>
         </Link>
         <div className="flex gap-8 fixed bottom-6">
-          <Link href="https://github.com/senna-lang">
+          <Link href="https://github.com/senna-lang" target="_blank">
             <FaGithub className=" text-2xl cursor-pointer" />
           </Link>
-          <Link href="/">
+          <Link href="/" target="_blank">
             <FaXTwitter className=" text-2xl cursor-pointer" />
           </Link>
-          <Link href="/">
+          <Link href="/" target="_blank">
             <FaInstagram className=" text-2xl cursor-pointer" />
           </Link>
         </div>
