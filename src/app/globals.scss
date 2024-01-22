@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.modal {
+  & h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    text-align: center;
+    &:before,
+    &:after {
+      content: '';
+      width: 100px;
+      height: 2px;
+      background-color: gray;
+    }
+
+    &:before {
+      margin-right: 20px;
+    }
+
+    &:after {
+      margin-left: 20px;
+    }
+  }
+}
