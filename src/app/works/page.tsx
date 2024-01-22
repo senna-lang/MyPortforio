@@ -6,12 +6,14 @@ import { FaInstagram } from 'react-icons/fa';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Image from 'next/image';
-import { useDisclosure } from '@mantine/hooks';
-import { Modal } from '@mantine/core';
+import VtsModal from '../components/VtsModal';
+import NotionBlogModal from '../components/NotionBlogModal';
+import PortfolioModal from '../components/PortfolioModal';
+import { useAppContext } from '@/context/AppContext';
 
 export default function Works() {
-  const [opened, { open, close }] = useDisclosure(false);
-
+  const { setIsNotionModalOpen, setIsPortfolioModalOpen, setIsVtsModalOpen } =
+    useAppContext();
   return (
     <div className="min-h-screen w-full flex">
       <div className="flex flex-col items-center justify-center bg-[#f4f6fc] w-1/3 h-screen">
@@ -42,55 +44,56 @@ export default function Works() {
           <div className=" mb-10">
             <h1 className=" text-5xl">Works</h1>
           </div>
-          <div className="grid grid-cols-3 gap-2 items-center mb-8">
+          <div className="grid grid-cols-2 xl:grid-cols-3 gap-2 items-center mb-8">
             <div>
-              <Image
-                src="https://placehold.jp/350x260.png"
-                alt="worksImg"
-                width={350}
-                height={260}
-                className=" mb-2 cursor-pointer"
-                onClick={open}
-              />
-              <h1 className=" text-center">My Portfolio</h1>
+              <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
+                <Image
+                  src="https://placehold.jp/350x260.png"
+                  alt="worksImg"
+                  width={243}
+                  height={137}
+                  className=" mb-2 cursor-pointer absolute top-0 left-0 w-full h-full object-cover"
+                  onClick={() => setIsPortfolioModalOpen(true)}
+                />
+              </div>
+              <h2 className=" text-center">My Portfolio</h2>
             </div>
             <div>
-              <Image
-                src="https://placehold.jp/350x260.png"
-                alt="worksImg"
-                width={350}
-                height={260}
-                className=" mb-2"
-              />
+              <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
+                <Image
+                  src="/slider/Notion1.jpg"
+                  alt="worksImg"
+                  width={243}
+                  height={137}
+                  className="mb-2 cursor-pointer absolute top-0 left-0 w-full h-full object-cover"
+                  onClick={() => setIsNotionModalOpen(true)}
+                />
+              </div>
               <h2 className=" text-center">Notion Blog</h2>
             </div>
             <div>
-              <Image
-                src="https://placehold.jp/350x260.png"
-                alt="worksImg"
-                width={350}
-                height={260}
-                className=" mb-2"
-              />
+              <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
+                <Image
+                  src="/slider/VTS1.png"
+                  alt="worksImg"
+                  width={243}
+                  height={137}
+                  style={{ objectFit: 'cover' }}
+                  className="mb-2 cursor-pointer absolute top-0 left-0 w-full h-full object-cover"
+                  onClick={() => setIsVtsModalOpen(true)}
+                />
+              </div>
               <h2 className=" text-center">文字起こし要約アプリ</h2>
             </div>
           </div>
           <div className=" mb-10">
-            <h1 className=" text-5xl">Practice</h1>
+            <h2 className=" text-5xl">Practice</h2>
           </div>
         </div>
       </div>
-      <Modal opened={opened} onClose={close} title="ok">
-        <div className="flex border-blue-400 border-dashed border-2 rounded-md  p-5">
-          <div className=" w-1/2 h-80 bg-red-500">
-            <h1 className=" text-center"> My Portfolio</h1>
-            <p>
-              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間
-            </p>
-          </div>
-          <div className="w-1/2 bg-blue-500"></div>
-        </div>
-      </Modal>
+      <VtsModal />
+      <NotionBlogModal />
+      <PortfolioModal />
     </div>
   );
 }
