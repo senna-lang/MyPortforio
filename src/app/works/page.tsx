@@ -10,10 +10,17 @@ import VtsModal from '../components/VtsModal';
 import NotionBlogModal from '../components/NotionBlogModal';
 import PortfolioModal from '../components/PortfolioModal';
 import { useAppContext } from '@/context/AppContext';
+import EcSiteModal from '../components/EcSiteModal';
+import TodoAppModal from '../components/TodoAppModal';
 
 export default function Works() {
-  const { setIsNotionModalOpen, setIsPortfolioModalOpen, setIsVtsModalOpen } =
-    useAppContext();
+  const {
+    setIsNotionModalOpen,
+    setIsPortfolioModalOpen,
+    setIsVtsModalOpen,
+    setIsEcModalOpen,
+    setIsTodoModalOpen
+  } = useAppContext();
   return (
     <div className="min-h-screen w-full flex">
       <div className="flex flex-col items-center justify-center bg-[#f4f6fc] w-1/3 h-screen">
@@ -27,13 +34,13 @@ export default function Works() {
           <span className="block text-5xl">Portfolio</span>
         </Link>
         <div className="flex gap-8 fixed bottom-6">
-          <Link href="https://github.com/senna-lang"  target="_blank">
+          <Link href="https://github.com/senna-lang" target="_blank">
             <FaGithub className=" text-2xl cursor-pointer" />
           </Link>
-          <Link href="/"  target="_blank">
+          <Link href="/" target="_blank">
             <FaXTwitter className=" text-2xl cursor-pointer" />
           </Link>
-          <Link href="/"  target="_blank">
+          <Link href="/" target="_blank">
             <FaInstagram className=" text-2xl cursor-pointer" />
           </Link>
         </div>
@@ -42,7 +49,7 @@ export default function Works() {
         <Header />
         <div className=" flex flex-col justify-center mt-36 mx-24 p-8 text-slate-300">
           <div className=" mb-10">
-            <h1 className=" text-5xl">Works</h1>
+            <h2 className=" text-5xl">Works</h2>
           </div>
           <div className="grid grid-cols-2 xl:grid-cols-3 gap-2 items-center mb-8">
             <div>
@@ -87,13 +94,45 @@ export default function Works() {
             </div>
           </div>
           <div className=" mb-10">
-            <h2 className=" text-5xl">Practice</h2>
+            <h2 className=" text-5xl">Recently Practice</h2>
+          </div>
+          <div className="grid grid-cols-2 xl:grid-cols-3 gap-2 items-center mb-8">
+            <div>
+              <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
+                <Image
+                  src="/slider/VTS1.png"
+                  alt="worksImg"
+                  width={243}
+                  height={137}
+                  style={{ objectFit: 'cover' }}
+                  className="mb-2 cursor-pointer absolute top-0 left-0 w-full h-full object-cover"
+                  onClick={() => setIsEcModalOpen(true)}
+                />
+              </div>
+              <h2 className=" text-center">ECsite Demo</h2>
+            </div>
+            <div>
+              <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
+                <Image
+                  src="/slider/Todo1.png"
+                  alt="worksImg"
+                  width={243}
+                  height={137}
+                  style={{ objectFit: 'cover' }}
+                  className="mb-2 cursor-pointer absolute top-0 left-0 w-full h-full object-cover"
+                  onClick={() => setIsTodoModalOpen(true)}
+                />
+              </div>
+              <h2 className=" text-center">AWS TodoApp Demo</h2>
+            </div>
           </div>
         </div>
       </div>
       <VtsModal />
       <NotionBlogModal />
       <PortfolioModal />
+      <EcSiteModal />
+      <TodoAppModal/>
     </div>
   );
 }
