@@ -10,6 +10,10 @@ interface AppContextType {
   setIsNotionModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
   isVtsModalOpen: boolean;
   setIsVtsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isEcModalOpen: boolean;
+  setIsEcModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isTodoModalOpen: boolean;
+  setIsTodoModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const defaultContextData: AppContextType = {
@@ -21,6 +25,10 @@ const defaultContextData: AppContextType = {
   setIsNotionModalOpen: () => {},
   isVtsModalOpen: false,
   setIsVtsModalOpen: () => {},
+  isEcModalOpen: false,
+  setIsEcModalOpen: () => {},
+  isTodoModalOpen: false,
+  setIsTodoModalOpen: () => {},
 };
 
 interface AppProviderProps {
@@ -35,6 +43,8 @@ export function AppProvider({ children }: AppProviderProps) {
     useState<boolean>(false);
   const [isNotionModalOpen, setIsNotionModalOpen] = useState<boolean>(false);
   const [isVtsModalOpen, setIsVtsModalOpen] = useState<boolean>(false);
+  const [isEcModalOpen, setIsEcModalOpen] = useState<boolean>(false);
+  const [isTodoModalOpen, setIsTodoModalOpen] = useState<boolean>(false);
 
   return (
     <AppContext.Provider
@@ -47,6 +57,10 @@ export function AppProvider({ children }: AppProviderProps) {
         setIsNotionModalOpen,
         isVtsModalOpen,
         setIsVtsModalOpen,
+        isEcModalOpen,
+        setIsEcModalOpen,
+        isTodoModalOpen,
+        setIsTodoModalOpen,
       }}
     >
       {children}
