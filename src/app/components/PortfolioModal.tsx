@@ -7,7 +7,7 @@ const PortfolioModal = () => {
   const { isPortfolioModalOpen, setIsPortfolioModalOpen } = useAppContext();
 
   const notionImages: string[] = [
-    '/slider/Notion1.png',
+    '/slider/Notion1.jpg',
     '/slider/Notion2.png',
     '/slider/Notion3.png',
   ];
