@@ -1,7 +1,7 @@
 'use client';
+import { Slider } from './Slider';
 import { Modal } from '@mantine/core';
 import { useAppContext } from '@/context/AppContext';
-import { Slider } from './Slider';
 
 const PortfolioModal = () => {
   const { isPortfolioModalOpen, setIsPortfolioModalOpen } = useAppContext();

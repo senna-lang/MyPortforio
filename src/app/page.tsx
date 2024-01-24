@@ -1,14 +1,13 @@
 'use client';
 
-import { Canvas } from '@react-three/fiber';
-import GeoStars from './components/GeoStars';
 import Image from 'next/image';
+import Link from 'next/link';
+import Header from './components/Header';
+import { Canvas } from '@react-three/fiber';
 import GeoText from './components/GeoText';
 import { FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
-import Link from 'next/link';
-import Header from './components/Header';
 
 export default function Home() {
   return (

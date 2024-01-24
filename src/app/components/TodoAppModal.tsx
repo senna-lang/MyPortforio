@@ -1,14 +1,14 @@
 'use client';
+
+import Link from 'next/link';
+import { Slider } from '../components/Slider';
 import { Modal } from '@mantine/core';
 import { useAppContext } from '@/context/AppContext';
-import { Slider } from '../components/Slider';
 import NextjsLogo from '/public/logos/nextjs.svg';
 import TailwindLogo from '/public/logos/tailwind-css-2.svg';
 import TsLogo from '/public/logos/typescript.svg';
 import AwsLogo from '/public/logos/aws-2.svg'
 import PrismaLogo from '/public/logos/prisma-2.svg'
-import Link from 'next/link';
-import Image from 'next/image';
 import { BsGithub } from 'react-icons/bs';
 
 const TodoAppModal = () => {

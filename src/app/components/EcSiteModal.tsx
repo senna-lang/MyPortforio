@@ -1,7 +1,8 @@
 'use client';
+import Link from 'next/link';
+import { Slider } from '../components/Slider';
 import { Modal } from '@mantine/core';
 import { useAppContext } from '@/context/AppContext';
-import { Slider } from '../components/Slider';
 import NextjsLogo from '/public/logos/nextjs.svg';
 import TailwindLogo from '/public/logos/tailwind-css-2.svg';
 import TsLogo from '/public/logos/typescript.svg';
@@ -9,8 +10,6 @@ import MicroCmsLogo from '/public//logos/icon-black.svg';
 import PostgresLogo from '/public/logos/Postgresql_elephant.svg';
 import VercelLogo from '/public/logos/logo-vercel-svgrepo-com.svg';
 import StripeLogo from '/public/logos/stripe.svg';
-import Link from 'next/link';
-import Image from 'next/image';
 import { BsGithub } from 'react-icons/bs';
 
 const EcSiteModal = () => {

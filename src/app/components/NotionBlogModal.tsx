@@ -1,14 +1,14 @@
 'use client';
+import Link from 'next/link';
+import { Slider } from '../components/Slider';
 import { Modal } from '@mantine/core';
 import { useAppContext } from '@/context/AppContext';
-import { Slider } from '../components/Slider';
 import NextjsLogo from '/public/logos/nextjs.svg';
 import TailwindLogo from '/public/logos/tailwind-css-2.svg';
 import TsLogo from '/public/logos/typescript.svg';
 import GithubLogo from '/public/logos/github-actions-seeklogo.svg';
 import NotionLogo from '/public/logos/Notion-logo.svg';
 import VercelLogo from '/public/logos/logo-vercel-svgrepo-com.svg';
-import Link from 'next/link';
 import { BsGithub } from 'react-icons/bs';
 
 const NotionBlogModal = () => {
@@ -37,7 +37,7 @@ const NotionBlogModal = () => {
             notionのdatabaseに記事を書いてそのままブログに投稿できるNotionBlogです。私自身のブログとして実際に運用して行くことを想定して作りました。Notion自体は以前から簡単なメモからタスク管理など日頃からよく触るものであり、Notionで記事を書いてそのままブログにアップロードできるというのは日々のルーティンワークに取り入れやすく、記事を書いて投稿するハードルが下がるのではと言う思いから作りました。
             <Link
               className=" text-blue-500"
-              href="https://nextjs-myblog.vercel.app/articles/notionblog"
+              href="https://senna-notionblog.vercel.app/articles/notionblog"
               target="_blank"
             >
               ブログ続く
@@ -48,10 +48,10 @@ const NotionBlogModal = () => {
               <span>Domain: </span>
               <Link
                 className=" text-blue-500"
-                href="https://nextjs-myblog.vercel.app/"
+                href="https://senna-notionblog.vercel.app/"
                 target="_blank"
               >
-                https://nextjs-myblog.vercel.app/
+                https://senna-notionblog.vercel.app
               </Link>
             </li>
             <li>

@@ -1,8 +1,9 @@
 'use client';
+
+import Link from 'next/link';
+import { Slider } from '../components/Slider';
 import { Modal } from '@mantine/core';
 import { useAppContext } from '@/context/AppContext';
-import { Slider } from '../components/Slider';
-import Link from 'next/link';
 import NextjsLogo from '/public/logos/nextjs.svg';
 import TailwindLogo from '/public/logos/tailwind-css-2.svg';
 import TsLogo from '/public/logos/typescript.svg';

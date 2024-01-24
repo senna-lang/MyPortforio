@@ -1,15 +1,12 @@
 'use client';
 
-import { FaGithub } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
-import { FaInstagram } from 'react-icons/fa';
-import Link from 'next/link';
-import Header from '../components/Header';
 import Image from 'next/image';
+import Header from '../components/Header';
+import Sidebar from '../components/Sidebar';
+import { useAppContext } from '@/context/AppContext';
+import PortfolioModal from '../components/PortfolioModal';
 import VtsModal from '../components/VtsModal';
 import NotionBlogModal from '../components/NotionBlogModal';
-import PortfolioModal from '../components/PortfolioModal';
-import { useAppContext } from '@/context/AppContext';
 import EcSiteModal from '../components/EcSiteModal';
 import TodoAppModal from '../components/TodoAppModal';
 
@@ -23,28 +20,7 @@ export default function Works() {
   } = useAppContext();
   return (
     <div className="min-h-screen w-full flex">
-      <div className="flex flex-col items-center justify-center bg-[#f4f6fc] w-1/3 h-screen">
-        <div className=" fixed top-6 left-9">
-          <Link href="/" className=" text-xl font-extrabold ">
-            SENNA_lang
-          </Link>
-        </div>
-        <Link href="/" className="mt-5">
-          <span className="block text-5xl">Sena Inomata</span>
-          <span className="block text-5xl">Portfolio</span>
-        </Link>
-        <div className="flex gap-8 fixed bottom-6">
-          <Link href="https://github.com/senna-lang" target="_blank">
-            <FaGithub className=" text-2xl cursor-pointer" />
-          </Link>
-          <Link href="/" target="_blank">
-            <FaXTwitter className=" text-2xl cursor-pointer" />
-          </Link>
-          <Link href="/" target="_blank">
-            <FaInstagram className=" text-2xl cursor-pointer" />
-          </Link>
-        </div>
-      </div>
+     <Sidebar/>
       <div className="bg-[#01060f] w-2/3 h-screen">
         <Header />
         <div className=" flex flex-col justify-center mt-36 mx-24 p-8 text-slate-300">

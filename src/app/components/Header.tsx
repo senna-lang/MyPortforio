@@ -1,8 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
-
 
 const Header = () => {
   return (
@@ -10,8 +8,8 @@ const Header = () => {
       <nav>
         <ul className=" flex justify-center gap-20 text-slate-300 text-2xl font-thin tracking-wide cursor-pointer">
           <Link href="/profile" >Profile</Link>
-          <Link href="/skill">Skill set</Link>
           <Link href="/works">Works</Link>
+          <Link href="/skill">Skill set</Link>
           <Link href="/contact">Contact</Link>
         </ul>
       </nav>
