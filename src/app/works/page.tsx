@@ -19,15 +19,15 @@ export default function Works() {
     setIsTodoModalOpen
   } = useAppContext();
   return (
-    <div className="min-h-screen w-full flex">
+    <div className="min-h-screen w-full lg:flex">
      <Sidebar/>
-      <div className="bg-[#01060f] w-2/3 h-screen">
+      <div className="bg-[#01060f] lg:w-2/3 h-auto lg:h-screen">
         <Header />
-        <div className=" flex flex-col justify-center mt-36 mx-24 p-8 text-slate-300">
+        <div className="flex flex-col justify-center mx-12 py-8 lg:mt-4 lg:mx-24 xl:mt-24 text-slate-300">
           <div className=" mb-10">
             <h2 className=" text-5xl">Works</h2>
           </div>
-          <div className="grid grid-cols-2 xl:grid-cols-3 gap-2 items-center mb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 items-center mb-8">
             <div>
               <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
                 <Image
@@ -72,7 +72,7 @@ export default function Works() {
           <div className=" mb-10">
             <h2 className=" text-5xl">Recently Practice</h2>
           </div>
-          <div className="grid grid-cols-2 xl:grid-cols-3 gap-2 items-center mb-8">
+          <div className="grid grid-cols-2 xl:grid-cols-3 gap-2 items-center">
             <div>
               <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
                 <Image

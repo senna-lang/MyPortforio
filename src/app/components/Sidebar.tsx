@@ -5,7 +5,7 @@ import { FaInstagram } from 'react-icons/fa';
 
 const Sidebar = () => {
   return (
-   <div className="flex flex-col items-center justify-center bg-[#f4f6fc] w-1/3 h-screen">
+   <div className="flex flex-col items-center justify-center bg-[#f4f6fc] lg:w-1/3 h-screen">
    <div className=" fixed top-6 left-9">
      <Link href="/" className=" text-xl font-extrabold ">
        SENNA_lang
