@@ -76,7 +76,7 @@ export default function Works() {
             <div>
               <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
                 <Image
-                  src="/slider/VTS1.png"
+                  src="/slider/Ecapp1.png"
                   alt="worksImg"
                   width={243}
                   height={137}

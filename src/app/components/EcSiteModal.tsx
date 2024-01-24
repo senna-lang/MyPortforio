@@ -15,11 +15,7 @@ import { BsGithub } from 'react-icons/bs';
 const EcSiteModal = () => {
   const { isEcModalOpen, setIsEcModalOpen } = useAppContext();
 
-  const notionImages: string[] = [
-    '/slider/Notion1.jpg',
-    '/slider/Notion2.png',
-    '/slider/Notion3.png',
-  ];
+  const notionImages: string[] = ['/slider/Ecapp1.png', '/slider/Ecapp2.png'];
   return (
     <Modal
       opened={isEcModalOpen}
