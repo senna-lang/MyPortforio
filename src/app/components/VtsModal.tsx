@@ -32,8 +32,8 @@ const VtsModal = () => {
         timingFunction: 'linear',
       }}
     >
-      <div className=" modal flex">
-        <div className=" w-1/3 p-5">
+      <div className=" modal flex flex-col xl:flex-row">
+        <div className=" xl:w-1/3 p-5">
           <h2 className=" text-center text-2xl mb-3">VTS</h2>
           <p className=" mb-4 px-5">
             MP3,MP4,M4Aの音声ファイルをffmpegでMP3に変換してWhisperが文字起こしをします。その文章をChatGPTに要約してもらう、というのが主な機能となります。Voice-Transcript-Summarizeの頭文字をとってVTSと名付けました。作成された文字起こしと要約テキストはFireBaseのFireStoreに保存することができ、ダッシュボードから閲覧できます。また、ユーザー認証もFireBaseのAuthenticationを採用しています。SPAなのでログインすればダッシュボードから新しい要約を作ったり、保存したテキストの一覧を閲覧するなど全てのアクションが可能です。
@@ -140,7 +140,7 @@ const VtsModal = () => {
             </Link>
           </div>
         </div>
-        <div className="w-2/3 p-6">
+        <div className="xl:w-2/3 p-6">
           <Slider images={notionImages} />
         </div>
       </div>

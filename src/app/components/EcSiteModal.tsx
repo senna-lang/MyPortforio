@@ -27,8 +27,8 @@ const EcSiteModal = () => {
         timingFunction: 'linear',
       }}
     >
-      <div className=" modal flex  leading-6">
-        <div className=" w-1/3 p-5">
+      <div className=" modal flex flex-col xl:flex-row leading-6">
+        <div className=" xl:w-1/3 p-5">
           <h2 className=" text-center text-2xl mb-3">ECsite Demo</h2>
           <p className=" mb-2 px-5">
             決済機能、ユーザー認証などECサイトに必要な機能を最低限備えたアプリケーションをVercel
@@ -121,7 +121,7 @@ const EcSiteModal = () => {
             </Link>
           </div>
         </div>
-        <div className="w-2/3 p-6">
+        <div className=" xl:w-2/3 p-6">
           <Slider images={notionImages} />
         </div>
       </div>

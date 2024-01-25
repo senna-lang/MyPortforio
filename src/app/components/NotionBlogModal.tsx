@@ -30,8 +30,8 @@ const NotionBlogModal = () => {
         timingFunction: 'linear',
       }}
     >
-      <div className=" modal flex  leading-6">
-        <div className=" w-1/3 p-5">
+      <div className=" modal flex flex-col xl:flex-row leading-6">
+        <div className=" xl:w-1/3 p-5">
           <h2 className=" text-center text-2xl mb-3">Notion Blog</h2>
           <p className=" mb-2 px-5">
             notionのdatabaseに記事を書いてそのままブログに投稿できるNotionBlogです。私自身のブログとして実際に運用して行くことを想定して作りました。Notion自体は以前から簡単なメモからタスク管理など日頃からよく触るものであり、Notionで記事を書いてそのままブログにアップロードできるというのは日々のルーティンワークに取り入れやすく、記事を書いて投稿するハードルが下がるのではと言う思いから作りました。
@@ -138,7 +138,7 @@ const NotionBlogModal = () => {
             </Link>
           </div>
         </div>
-        <div className="w-2/3 p-6">
+        <div className="xl:w-2/3 p-6">
           <Slider images={notionImages} />
         </div>
       </div>

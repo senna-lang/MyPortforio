@@ -30,8 +30,8 @@ const TodoAppModal = () => {
         timingFunction: 'linear',
       }}
     >
-      <div className=" modal flex  leading-6">
-        <div className=" w-1/3 p-5">
+      <div className=" modal flex flex-col xl:flex-row leading-6">
+        <div className=" xl:w-1/3 p-5">
           <h2 className=" text-center text-2xl mb-3">AWS TodoApp Demo</h2>
           <p className=" mb-2 px-5">
             インフラにAWSのAmplifyとApp Runnerを使ったTodoアプリケーションを作りました。クライアントサイドはNextjs、サーバーサイドはNode.jsです。<br/>
@@ -114,7 +114,7 @@ const TodoAppModal = () => {
             </Link>
           </div>
         </div>
-        <div className="w-2/3 p-6">
+        <div className="xl:w-2/3 p-6">
           <Slider images={notionImages} />
         </div>
       </div>

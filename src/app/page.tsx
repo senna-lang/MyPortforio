@@ -8,11 +8,12 @@ import GeoText from './components/GeoText';
 import { FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
+import MainImages from './components/MainImages';
 
 export default function Home() {
   return (
     <div className="min-h-screen w-full lg:flex relative">
-      <div className=" opacity-0 absolute top-48 2xl:opacity-100 2xl:left-[calc(33.3%-200px)]">
+      <div className=" opacity-0 absolute top-48 z-10 2xl:opacity-100 2xl:left-[calc(33.3%-200px)]">
         <Image
           src="/9803D0FA-E299-4F31-89B7-89D54B569EB4.jpeg"
           alt="profileImg"
@@ -44,13 +45,13 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="bg-[#01060f] lg:w-2/3 h-screen">
+      <div className="bg-[#01060f] lg:w-2/3 h-screen flex flex-col -z-0">
         <Header />
-        <div className="w-full h-screen">
-          <Canvas camera={{ position: [0, 0, 600] }} shadows dpr={[1, 2]}>
-            {/* <GeoStars /> */}
+        <div className="w-full flex-grow">
+          {/* <Canvas camera={{ position: [0, 0, 600] }} shadows dpr={[1, 2]}>
             <GeoText />
-          </Canvas>
+          </Canvas> */}
+          {/* <MainImages /> */}
         </div>
       </div>
     </div>
