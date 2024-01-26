@@ -9,6 +9,7 @@ import VtsModal from '../components/VtsModal';
 import NotionBlogModal from '../components/NotionBlogModal';
 import EcSiteModal from '../components/EcSiteModal';
 import TodoAppModal from '../components/TodoAppModal';
+import FadeInWrapper from '../components/wrapper/FadeInWrapper';
 
 export default function Works() {
   const {
@@ -28,7 +29,7 @@ export default function Works() {
             <h2 className=" text-5xl">Works</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 items-center mb-8">
-            <div>
+            <FadeInWrapper delay={0}>
               <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
                 <Image
                   src="https://placehold.jp/350x260.png"
@@ -40,8 +41,8 @@ export default function Works() {
                 />
               </div>
               <h2 className=" text-center">My Portfolio</h2>
-            </div>
-            <div>
+            </FadeInWrapper>
+            <FadeInWrapper delay={.2}>
               <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
                 <Image
                   src="/slider/Notion1.jpg"
@@ -53,8 +54,8 @@ export default function Works() {
                 />
               </div>
               <h2 className=" text-center">Notion Blog</h2>
-            </div>
-            <div>
+            </FadeInWrapper>
+            <FadeInWrapper delay={.4}>
               <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
                 <Image
                   src="/slider/VTS1.png"
@@ -67,13 +68,13 @@ export default function Works() {
                 />
               </div>
               <h2 className="text-center">文字起こし要約アプリ</h2>
-            </div>
+            </FadeInWrapper>
           </div>
           <div className=" mb-10">
             <h2 className=" text-5xl">Recently Practice</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 items-center">
-            <div>
+            <FadeInWrapper delay={0}>
               <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
                 <Image
                   src="/slider/Ecapp1.png"
@@ -86,8 +87,8 @@ export default function Works() {
                 />
               </div>
               <h2 className=" text-center">ECsite Demo</h2>
-            </div>
-            <div>
+            </FadeInWrapper>
+            <FadeInWrapper delay={.2}>
               <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
                 <Image
                   src="/slider/Todo1.png"
@@ -100,7 +101,7 @@ export default function Works() {
                 />
               </div>
               <h2 className=" text-center">AWS TodoApp Demo</h2>
-            </div>
+            </FadeInWrapper>
           </div>
         </div>
       </div>
