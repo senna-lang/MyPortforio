@@ -9,6 +9,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaInstagram } from 'react-icons/fa';
 import MainImages from './components/MainImages';
+import GeoStars from './components/GeoStars';
 
 export default function Home() {
   return (
@@ -48,10 +49,10 @@ export default function Home() {
       <div className="bg-[#01060f] lg:w-2/3 h-screen flex flex-col -z-0">
         <Header />
         <div className="w-full flex-grow">
-          {/* <Canvas camera={{ position: [0, 0, 600] }} shadows dpr={[1, 2]}>
-            <GeoText />
-          </Canvas> */}
-          {/* <MainImages /> */}
+          <Canvas camera={{ position: [0, 0, 600] }}>
+            <GeoStars />
+            <GeoText/>
+          </Canvas>
         </div>
       </div>
     </div>
