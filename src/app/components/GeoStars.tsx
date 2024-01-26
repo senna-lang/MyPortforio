@@ -10,17 +10,14 @@ const GeoStars = () => {
   const { isTransition, setIsTransition } = useAppContext();
 
   useFrame(() => {
-    starRef.current.rotation.y += isTransition ? 0.03 : 0.005;
+    starRef.current.rotation.y -= isTransition ? 0.03 : 0.001;
   });
 
   return (
     <>
-      <group ref={starRef} position={[0, 270, -500]}>
-        <Stars count={7000} radius={30} factor={7}/>
+      <group ref={starRef} position={[0, 0, -300]}>
+        <Stars count={9000} radius={30} factor={4} speed={2} saturation={10} fade/>
       </group>
-      {/* <group position={[0, 0, 0]}>
-        <Stars factor={4} fade speed={0.5} />
-      </group> */}
     </>
   );
 };
