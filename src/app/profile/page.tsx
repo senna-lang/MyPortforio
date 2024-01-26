@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
+import ScaleUpWrapper from '../components/wrapper/ScaleUpWrapper';
 
 export default function Profile() {
   return (
