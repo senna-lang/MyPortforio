@@ -4,7 +4,7 @@ import './globals.scss';
 import '@mantine/core/styles.css';
 import '@splidejs/react-splide/css';
 import { AppProvider } from '@/context/AppContext';
-import TransitionWrapper from './TransitionWrapper';
+import TransitionWrapper from './components/wrapper/TransitionWrapper';
 import { Roboto } from 'next/font/google';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 
