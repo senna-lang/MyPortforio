@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 import { CursorBlinker } from './CursolBlinker';
 
 type AnimatedTextProps = {
-  text: string; // The text to be animated.
+  text: string; 
   delay: number;
 };
 
-export const TextTypeWrapper = ({ text, delay }: AnimatedTextProps) => {
+export const TextTypingAnim = ({ text, delay }: AnimatedTextProps) => {
   const count = useMotionValue(0);
 
   // `rounded` is a transformed motion value of `count`, rounding it to the nearest whole number.

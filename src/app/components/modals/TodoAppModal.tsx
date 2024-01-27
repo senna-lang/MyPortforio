@@ -1,14 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { Slider } from '../components/Slider';
+import { Slider } from '../Slider';
 import { Modal } from '@mantine/core';
 import { useAppContext } from '@/context/AppContext';
 import NextjsLogo from '/public/logos/nextjs.svg';
 import TailwindLogo from '/public/logos/tailwind-css-2.svg';
 import TsLogo from '/public/logos/typescript.svg';
-import AwsLogo from '/public/logos/aws-2.svg'
-import PrismaLogo from '/public/logos/prisma-2.svg'
+import AwsLogo from '/public/logos/aws-2.svg';
+import PrismaLogo from '/public/logos/prisma-2.svg';
 import { BsGithub } from 'react-icons/bs';
 
 const TodoAppModal = () => {
@@ -34,16 +34,12 @@ const TodoAppModal = () => {
         <div className=" xl:w-1/3 p-5">
           <h2 className=" text-center text-2xl mb-3">AWS TodoApp Demo</h2>
           <p className=" mb-2 px-5">
-            インフラにAWSのAmplifyとApp Runnerを使ったTodoアプリケーションを作りました。クライアントサイドはNextjs、サーバーサイドはNode.jsです。<br/>
+            インフラにAWSのAmplifyとApp
+            Runnerを使ったTodoアプリケーションを作りました。クライアントサイドはNextjs、サーバーサイドはNode.jsです。
+            <br />
             AWSを触れてみようと思い、オンライン講座を参考に開発しました。サーバーサイドはGET,POST,PATCH,DELETEに対応し、TodoリストのCRUD操作を網羅しました。
-            クライアントサイドはAmplifyにサーバーサイドはApp Runnerにそれぞれデプロイしています。
-            {/* <Link
-              className=" text-blue-500"
-              href="https://nextjs-myblog.vercel.app/articles/notionblog"
-              target="_blank"
-            >
-              ブログ続く
-            </Link> */}
+            クライアントサイドはAmplifyにサーバーサイドはApp
+            Runnerにそれぞれデプロイしています。
           </p>
           <ul className="mb-4 px-5">
             <li>

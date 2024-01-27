@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Slider } from '../components/Slider';
+import { Slider } from '../Slider';
 import { Modal } from '@mantine/core';
 import { useAppContext } from '@/context/AppContext';
 import NextjsLogo from '/public/logos/nextjs.svg';

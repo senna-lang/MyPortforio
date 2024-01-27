@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
-import TextFadeAnimWrapper from '../components/wrapper/TextFadeAnimWrapper';
-import { TextTypeWrapper } from '../components/wrapper/TextTypeWrapper';
+import { TextTypingAnim } from '../components/animations/TextTypingAnim';
 
 export default function Skill() {
   return (
@@ -18,10 +17,10 @@ export default function Skill() {
             <h2>Language</h2>
             <ul className=" flex gap-3">
               <li>
-                <TextTypeWrapper text="Javascript" delay={0} />
+                <TextTypingAnim text="Javascript" delay={0} />
               </li>
               <li>
-                <TextTypeWrapper text="Typescript" delay={2} />
+                <TextTypingAnim text="Typescript" delay={2} />
               </li>
             </ul>
           </div>
@@ -29,10 +28,10 @@ export default function Skill() {
             <h2>Library / Framework</h2>
             <ul className=" flex gap-3">
               <li>
-                <TextTypeWrapper text="React" delay={0} />
+                <TextTypingAnim text="React" delay={0} />
               </li>
               <li>
-                <TextTypeWrapper text="Next.js" delay={2} />
+                <TextTypingAnim text="Next.js" delay={2} />
               </li>
             </ul>
           </div>
@@ -40,19 +39,19 @@ export default function Skill() {
             <h2>Other</h2>
             <ul className="grid grid-cols-3 gap-1 md:flex md:gap-3">
               <li>
-                <TextTypeWrapper text="FireBase" delay={0} />
+                <TextTypingAnim text="FireBase" delay={0} />
               </li>
               <li>
-                <TextTypeWrapper text="NotionAPI" delay={2} />
+                <TextTypingAnim text="NotionAPI" delay={2} />
               </li>
               <li>
-                <TextTypeWrapper text="OpenAI" delay={4} />
+                <TextTypingAnim text="OpenAI" delay={4} />
               </li>
               <li>
-                <TextTypeWrapper text="microCMS" delay={6} />
+                <TextTypingAnim text="microCMS" delay={6} />
               </li>
               <li>
-                <TextTypeWrapper text="MantineUI" delay={8} />
+                <TextTypingAnim text="MantineUI" delay={8} />
               </li>
             </ul>
           </div>
@@ -60,10 +59,10 @@ export default function Skill() {
             <h2>Now learning</h2>
             <ul className=" flex gap-3">
               <li>
-                <TextTypeWrapper text="AWS" delay={0} />
+                <TextTypingAnim text="AWS" delay={0} />
               </li>
               <li>
-                <TextTypeWrapper text="Three,js" delay={2} />
+                <TextTypingAnim text="Three,js" delay={2} />
               </li>
               <li></li>
             </ul>

@@ -4,12 +4,12 @@ import Image from 'next/image';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import { useAppContext } from '@/context/AppContext';
-import PortfolioModal from '../components/PortfolioModal';
-import VtsModal from '../components/VtsModal';
-import NotionBlogModal from '../components/NotionBlogModal';
-import EcSiteModal from '../components/EcSiteModal';
-import TodoAppModal from '../components/TodoAppModal';
-import FadeInWrapper from '../components/wrapper/FadeInWrapper';
+import PortfolioModal from '../components/modals/PortfolioModal';
+import VtsModal from '../components/modals/VtsModal';
+import NotionBlogModal from '../components/modals/NotionBlogModal';
+import EcSiteModal from '../components/modals/EcSiteModal';
+import TodoAppModal from '../components/modals/TodoAppModal';
+import FadeInWrapper from '../components/animations/FadeInWrapper';
 
 export default function Works() {
   const {
@@ -17,11 +17,11 @@ export default function Works() {
     setIsPortfolioModalOpen,
     setIsVtsModalOpen,
     setIsEcModalOpen,
-    setIsTodoModalOpen
+    setIsTodoModalOpen,
   } = useAppContext();
   return (
     <div className="min-h-screen w-full lg:flex">
-     <Sidebar/>
+      <Sidebar />
       <div className="bg-[#01060f] lg:w-2/3 h-auto lg:h-screen">
         <Header />
         <div className="flex flex-col justify-center mx-12 py-8 lg:mt-4 xl:mx-24 xl:mt-24 text-slate-300">
@@ -42,7 +42,7 @@ export default function Works() {
               </div>
               <h2 className=" text-center">My Portfolio</h2>
             </FadeInWrapper>
-            <FadeInWrapper delay={.2}>
+            <FadeInWrapper delay={0.2}>
               <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
                 <Image
                   src="/slider/Notion1.jpg"
@@ -55,7 +55,7 @@ export default function Works() {
               </div>
               <h2 className=" text-center">Notion Blog</h2>
             </FadeInWrapper>
-            <FadeInWrapper delay={.4}>
+            <FadeInWrapper delay={0.4}>
               <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
                 <Image
                   src="/slider/VTS1.png"
@@ -88,7 +88,7 @@ export default function Works() {
               </div>
               <h2 className=" text-center">ECsite Demo</h2>
             </FadeInWrapper>
-            <FadeInWrapper delay={.2}>
+            <FadeInWrapper delay={0.2}>
               <div className="mb-2 relative before:content-[''] before:block before: pt-[56.25%]">
                 <Image
                   src="/slider/Todo1.png"
@@ -109,7 +109,7 @@ export default function Works() {
       <NotionBlogModal />
       <PortfolioModal />
       <EcSiteModal />
-      <TodoAppModal/>
+      <TodoAppModal />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 'use client';
-import { Slider } from './Slider';
+import { Slider } from '../Slider';
 import { Modal } from '@mantine/core';
 import { useAppContext } from '@/context/AppContext';
 

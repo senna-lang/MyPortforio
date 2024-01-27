@@ -4,7 +4,7 @@ import './globals.scss';
 import '@mantine/core/styles.css';
 import '@splidejs/react-splide/css';
 import { AppProvider } from '@/context/AppContext';
-import TransitionWrapper from './components/wrapper/TransitionWrapper';
+import TransitionWrapper from './components/animations/TransitionWrapper';
 import { Roboto } from 'next/font/google';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <TransitionWrapper>
           <AppProvider>
-            <MantineProvider >{children}</MantineProvider>
+            <MantineProvider>{children}</MantineProvider>
           </AppProvider>
         </TransitionWrapper>
       </body>
