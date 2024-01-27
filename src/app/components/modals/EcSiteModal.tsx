@@ -1,35 +1,35 @@
-'use client';
-import Link from 'next/link';
-import { Slider } from '../Slider';
-import { Modal } from '@mantine/core';
-import { useAppContext } from '@/context/AppContext';
-import NextjsLogo from '/public/logos/nextjs.svg';
-import TailwindLogo from '/public/logos/tailwind-css-2.svg';
-import TsLogo from '/public/logos/typescript.svg';
-import MicroCmsLogo from '/public//logos/icon-black.svg';
-import PostgresLogo from '/public/logos/Postgresql_elephant.svg';
-import VercelLogo from '/public/logos/logo-vercel-svgrepo-com.svg';
-import StripeLogo from '/public/logos/stripe.svg';
-import { BsGithub } from 'react-icons/bs';
+"use client";
+import Link from "next/link";
+import { Slider } from "../Slider";
+import { Modal } from "@mantine/core";
+import { useAppContext } from "@/context/AppContext";
+import NextjsLogo from "/public/logos/nextjs.svg";
+import TailwindLogo from "/public/logos/tailwind-css-2.svg";
+import TsLogo from "/public/logos/typescript.svg";
+import MicroCmsLogo from "/public//logos/icon-black.svg";
+import PostgresLogo from "/public/logos/Postgresql_elephant.svg";
+import VercelLogo from "/public/logos/logo-vercel-svgrepo-com.svg";
+import StripeLogo from "/public/logos/stripe.svg";
+import { BsGithub } from "react-icons/bs";
 
 const EcSiteModal = () => {
   const { isEcModalOpen, setIsEcModalOpen } = useAppContext();
 
-  const notionImages: string[] = ['/slider/Ecapp1.png', '/slider/Ecapp2.png'];
+  const notionImages: string[] = ["/slider/Ecapp1.png", "/slider/Ecapp2.png"];
   return (
     <Modal
       opened={isEcModalOpen}
       onClose={() => setIsEcModalOpen(false)}
       size="90%"
       transitionProps={{
-        transition: 'scale',
+        transition: "scale",
         duration: 200,
-        timingFunction: 'linear',
+        timingFunction: "linear",
       }}
     >
-      <div className=" modal flex flex-col xl:flex-row leading-6">
-        <div className=" xl:w-1/3 p-5">
-          <h2 className=" text-center text-2xl mb-3">ECsite Demo</h2>
+      <div className=" modal flex flex-col leading-6 xl:flex-row">
+        <div className=" p-5 xl:w-1/3">
+          <h2 className=" mb-3 text-center text-2xl">ECsite Demo</h2>
           <p className=" mb-2 px-5">
             決済機能、ユーザー認証などECサイトに必要な機能を最低限備えたアプリケーションをVercel
             Postgres + Next.js +
@@ -68,8 +68,8 @@ const EcSiteModal = () => {
               </Link>
             </li>
           </ul>
-          <h2 className=" text-center text-2xl mb-3">使用技術</h2>
-          <div className="grid grid-cols-4 px-5 gap-4 place-items-center">
+          <h2 className=" mb-3 text-center text-2xl">使用技術</h2>
+          <div className="grid grid-cols-4 place-items-center gap-4 px-5">
             <Link
               className=" cursor-pointer"
               href="https://nextjs.org/"
@@ -121,7 +121,7 @@ const EcSiteModal = () => {
             </Link>
           </div>
         </div>
-        <div className=" xl:w-2/3 p-6">
+        <div className=" p-6 xl:w-2/3">
           <Slider images={notionImages} />
         </div>
       </div>

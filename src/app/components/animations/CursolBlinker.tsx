@@ -1,5 +1,5 @@
-'use client';
-import { motion } from 'framer-motion';
+"use client";
+import { motion } from "framer-motion";
 
 export const CursorBlinker = ({ delay }: { delay: number }) => {
   const cursorVariants = {
@@ -10,7 +10,7 @@ export const CursorBlinker = ({ delay }: { delay: number }) => {
         delay,
         repeat: 1.5,
         repeatDelay: 0,
-        ease: 'linear',
+        ease: "linear",
         times: [0, 0.5, 0.5, 1],
       },
     },

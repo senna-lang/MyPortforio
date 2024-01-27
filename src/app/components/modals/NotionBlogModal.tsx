@@ -1,23 +1,23 @@
-'use client';
-import Link from 'next/link';
-import { Slider } from '../Slider';
-import { Modal } from '@mantine/core';
-import { useAppContext } from '@/context/AppContext';
-import NextjsLogo from '/public/logos/nextjs.svg';
-import TailwindLogo from '/public/logos/tailwind-css-2.svg';
-import TsLogo from '/public/logos/typescript.svg';
-import GithubLogo from '/public/logos/github-actions-seeklogo.svg';
-import NotionLogo from '/public/logos/Notion-logo.svg';
-import VercelLogo from '/public/logos/logo-vercel-svgrepo-com.svg';
-import { BsGithub } from 'react-icons/bs';
+"use client";
+import Link from "next/link";
+import { Slider } from "../Slider";
+import { Modal } from "@mantine/core";
+import { useAppContext } from "@/context/AppContext";
+import NextjsLogo from "/public/logos/nextjs.svg";
+import TailwindLogo from "/public/logos/tailwind-css-2.svg";
+import TsLogo from "/public/logos/typescript.svg";
+import GithubLogo from "/public/logos/github-actions-seeklogo.svg";
+import NotionLogo from "/public/logos/Notion-logo.svg";
+import VercelLogo from "/public/logos/logo-vercel-svgrepo-com.svg";
+import { BsGithub } from "react-icons/bs";
 
 const NotionBlogModal = () => {
   const { isNotionModalOpen, setIsNotionModalOpen } = useAppContext();
 
   const notionImages: string[] = [
-    '/slider/Notion1.jpg',
-    '/slider/Notion2.png',
-    '/slider/Notion3.png',
+    "/slider/Notion1.jpg",
+    "/slider/Notion2.png",
+    "/slider/Notion3.png",
   ];
   return (
     <Modal
@@ -25,14 +25,14 @@ const NotionBlogModal = () => {
       onClose={() => setIsNotionModalOpen(false)}
       size="90%"
       transitionProps={{
-        transition: 'scale',
+        transition: "scale",
         duration: 200,
-        timingFunction: 'linear',
+        timingFunction: "linear",
       }}
     >
-      <div className=" modal flex flex-col xl:flex-row leading-6">
-        <div className=" xl:w-1/3 p-5">
-          <h2 className=" text-center text-2xl mb-3">Notion Blog</h2>
+      <div className=" modal flex flex-col leading-6 xl:flex-row">
+        <div className=" p-5 xl:w-1/3">
+          <h2 className=" mb-3 text-center text-2xl">Notion Blog</h2>
           <p className=" mb-2 px-5">
             notionのdatabaseに記事を書いてそのままブログに投稿できるNotionBlogです。私自身のブログとして実際に運用して行くことを想定して作りました。Notion自体は以前から簡単なメモからタスク管理など日頃からよく触るものであり、Notionで記事を書いてそのままブログにアップロードできるというのは日々のルーティンワークに取り入れやすく、記事を書いて投稿するハードルが下がるのではと言う思いから作りました。
             <Link
@@ -65,8 +65,8 @@ const NotionBlogModal = () => {
               </Link>
             </li>
           </ul>
-          <h2 className=" text-center text-2xl mb-3">使用技術</h2>
-          <div className="grid grid-cols-4 px-5 gap-4 place-items-center">
+          <h2 className=" mb-3 text-center text-2xl">使用技術</h2>
+          <div className="grid grid-cols-4 place-items-center gap-4 px-5">
             <Link
               className=" cursor-pointer"
               href="https://nextjs.org/"
@@ -138,7 +138,7 @@ const NotionBlogModal = () => {
             </Link>
           </div>
         </div>
-        <div className="xl:w-2/3 p-6">
+        <div className="p-6 xl:w-2/3">
           <Slider images={notionImages} />
         </div>
       </div>

@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { Slider } from '../Slider';
-import { Modal } from '@mantine/core';
-import { useAppContext } from '@/context/AppContext';
-import NextjsLogo from '/public/logos/nextjs.svg';
-import TailwindLogo from '/public/logos/tailwind-css-2.svg';
-import TsLogo from '/public/logos/typescript.svg';
-import AwsLogo from '/public/logos/aws-2.svg';
-import PrismaLogo from '/public/logos/prisma-2.svg';
-import { BsGithub } from 'react-icons/bs';
+import Link from "next/link";
+import { Slider } from "../Slider";
+import { Modal } from "@mantine/core";
+import { useAppContext } from "@/context/AppContext";
+import NextjsLogo from "/public/logos/nextjs.svg";
+import TailwindLogo from "/public/logos/tailwind-css-2.svg";
+import TsLogo from "/public/logos/typescript.svg";
+import AwsLogo from "/public/logos/aws-2.svg";
+import PrismaLogo from "/public/logos/prisma-2.svg";
+import { BsGithub } from "react-icons/bs";
 
 const TodoAppModal = () => {
   const { isTodoModalOpen, setIsTodoModalOpen } = useAppContext();
 
   const notionImages: string[] = [
-    '/slider/Todo2.png',
-    '/slider/Todo3.png',
-    '/slider/Todo4.png',
+    "/slider/Todo2.png",
+    "/slider/Todo3.png",
+    "/slider/Todo4.png",
   ];
   return (
     <Modal
@@ -25,14 +25,14 @@ const TodoAppModal = () => {
       onClose={() => setIsTodoModalOpen(false)}
       size="90%"
       transitionProps={{
-        transition: 'scale',
+        transition: "scale",
         duration: 200,
-        timingFunction: 'linear',
+        timingFunction: "linear",
       }}
     >
-      <div className=" modal flex flex-col xl:flex-row leading-6">
-        <div className=" xl:w-1/3 p-5">
-          <h2 className=" text-center text-2xl mb-3">AWS TodoApp Demo</h2>
+      <div className=" modal flex flex-col leading-6 xl:flex-row">
+        <div className=" p-5 xl:w-1/3">
+          <h2 className=" mb-3 text-center text-2xl">AWS TodoApp Demo</h2>
           <p className=" mb-2 px-5">
             インフラにAWSのAmplifyとApp
             Runnerを使ったTodoアプリケーションを作りました。クライアントサイドはNextjs、サーバーサイドはNode.jsです。
@@ -71,8 +71,8 @@ const TodoAppModal = () => {
               </Link>
             </li>
           </ul>
-          <h2 className=" text-center text-2xl mb-3">使用技術</h2>
-          <div className="grid grid-cols-4 px-5 gap-4 place-items-center">
+          <h2 className=" mb-3 text-center text-2xl">使用技術</h2>
+          <div className="grid grid-cols-4 place-items-center gap-4 px-5">
             <Link
               className=" cursor-pointer"
               href="https://nextjs.org/"
@@ -110,7 +110,7 @@ const TodoAppModal = () => {
             </Link>
           </div>
         </div>
-        <div className="xl:w-2/3 p-6">
+        <div className="p-6 xl:w-2/3">
           <Slider images={notionImages} />
         </div>
       </div>

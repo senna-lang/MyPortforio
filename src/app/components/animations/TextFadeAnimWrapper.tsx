@@ -1,12 +1,12 @@
-'use client';
-import { motion } from 'framer-motion';
+"use client";
+import { motion } from "framer-motion";
 
 export default function TextFadeAnimWrapper({
   children,
 }: {
   children: string;
 }) {
-  function shuffle(array:string[]) {
+  function shuffle(array: string[]) {
     let currentIndex = array.length,
       randomIndex;
 
@@ -26,8 +26,8 @@ export default function TextFadeAnimWrapper({
     return array;
   }
 
-  const splitText = children.split('');
-  
+  const splitText = children.split("");
+
   const textAnimate = splitText.map((text, index) => {
     return (
       <motion.div

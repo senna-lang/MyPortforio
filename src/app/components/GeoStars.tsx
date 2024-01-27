@@ -1,9 +1,9 @@
-'use client'
-import { Stars } from '@react-three/drei';
-import { useFrame } from '@react-three/fiber';
-import { useRef } from 'react';
-import { Group } from 'three';
-import { useAppContext } from '@/context/AppContext';
+"use client";
+import { Stars } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import { useRef } from "react";
+import { Group } from "three";
+import { useAppContext } from "@/context/AppContext";
 
 const GeoStars = () => {
   const starRef = useRef<Group>(null!);
@@ -16,7 +16,14 @@ const GeoStars = () => {
   return (
     <>
       <group ref={starRef} position={[0, 0, -300]}>
-        <Stars count={9000} radius={30} factor={4} speed={2} saturation={10} fade/>
+        <Stars
+          count={9000}
+          radius={30}
+          factor={4}
+          speed={2}
+          saturation={10}
+          fade
+        />
       </group>
     </>
   );

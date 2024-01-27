@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import { ScaleUp } from './animations/ScaleUp';
+import Link from "next/link";
+import { ScaleUp } from "./animations/ScaleUp";
 
 const Header = () => {
   return (
-    <div className=" hidden lg:block w-auto h-6 p-10">
+    <div className=" hidden h-6 w-auto p-10 lg:block">
       <nav>
-        <ul className=" flex justify-center gap-20 text-slate-300 text-2xl font-thin tracking-wide cursor-pointer">
+        <ul className=" flex cursor-pointer justify-center gap-20 text-2xl font-thin tracking-wide text-slate-300">
           <Link href="/profile">
             <ScaleUp text="Profile" />
           </Link>

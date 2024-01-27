@@ -1,25 +1,25 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { Slider } from '../Slider';
-import { Modal } from '@mantine/core';
-import { useAppContext } from '@/context/AppContext';
-import NextjsLogo from '/public/logos/nextjs.svg';
-import TailwindLogo from '/public/logos/tailwind-css-2.svg';
-import TsLogo from '/public/logos/typescript.svg';
-import VercelLogo from '/public/logos/logo-vercel-svgrepo-com.svg';
-import FirebaseLogo from '/public/logos/logo-vertical.svg';
-import OpeniaLogo from '/public//logos/openai-svgrepo-com.svg';
-import { BsGithub } from 'react-icons/bs';
+import Link from "next/link";
+import { Slider } from "../Slider";
+import { Modal } from "@mantine/core";
+import { useAppContext } from "@/context/AppContext";
+import NextjsLogo from "/public/logos/nextjs.svg";
+import TailwindLogo from "/public/logos/tailwind-css-2.svg";
+import TsLogo from "/public/logos/typescript.svg";
+import VercelLogo from "/public/logos/logo-vercel-svgrepo-com.svg";
+import FirebaseLogo from "/public/logos/logo-vertical.svg";
+import OpeniaLogo from "/public//logos/openai-svgrepo-com.svg";
+import { BsGithub } from "react-icons/bs";
 
 const VtsModal = () => {
   const { isVtsModalOpen, setIsVtsModalOpen } = useAppContext();
 
   const notionImages: string[] = [
-    '/slider/VTS1.png',
-    '/slider/VTS2.png',
-    '/slider/VTS3.png',
-    '/slider/VTS4.png',
+    "/slider/VTS1.png",
+    "/slider/VTS2.png",
+    "/slider/VTS3.png",
+    "/slider/VTS4.png",
   ];
   return (
     <Modal
@@ -27,14 +27,14 @@ const VtsModal = () => {
       onClose={() => setIsVtsModalOpen(false)}
       size="90%"
       transitionProps={{
-        transition: 'scale',
+        transition: "scale",
         duration: 200,
-        timingFunction: 'linear',
+        timingFunction: "linear",
       }}
     >
       <div className=" modal flex flex-col xl:flex-row">
-        <div className=" xl:w-1/3 p-5">
-          <h2 className=" text-center text-2xl mb-3">VTS</h2>
+        <div className=" p-5 xl:w-1/3">
+          <h2 className=" mb-3 text-center text-2xl">VTS</h2>
           <p className=" mb-4 px-5">
             MP3,MP4,M4Aの音声ファイルをffmpegでMP3に変換してWhisperが文字起こしをします。その文章をChatGPTに要約してもらう、というのが主な機能となります。Voice-Transcript-Summarizeの頭文字をとってVTSと名付けました。作成された文字起こしと要約テキストはFireBaseのFireStoreに保存することができ、ダッシュボードから閲覧できます。また、ユーザー認証もFireBaseのAuthenticationを採用しています。SPAなのでログインすればダッシュボードから新しい要約を作ったり、保存したテキストの一覧を閲覧するなど全てのアクションが可能です。
             <Link
@@ -67,8 +67,8 @@ const VtsModal = () => {
               </Link>
             </li>
           </ul>
-          <h2 className=" text-center text-2xl mb-3">使用技術</h2>
-          <div className="grid grid-cols-4 px-5 gap-4 place-items-center">
+          <h2 className=" mb-3 text-center text-2xl">使用技術</h2>
+          <div className="grid grid-cols-4 place-items-center gap-4 px-5">
             <Link
               className=" cursor-pointer"
               href="https://nextjs.org/"
@@ -140,7 +140,7 @@ const VtsModal = () => {
             </Link>
           </div>
         </div>
-        <div className="xl:w-2/3 p-6">
+        <div className="p-6 xl:w-2/3">
           <Slider images={notionImages} />
         </div>
       </div>

@@ -1,10 +1,10 @@
-'use client';
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { CursorBlinker } from './CursolBlinker';
+"use client";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect, useState } from "react";
+import { CursorBlinker } from "./CursolBlinker";
 
 type AnimatedTextProps = {
-  text: string; 
+  text: string;
   delay: number;
 };
 
@@ -12,20 +12,20 @@ export const TextTypingAnim = ({ text, delay }: AnimatedTextProps) => {
   const count = useMotionValue(0);
 
   // `rounded` is a transformed motion value of `count`, rounding it to the nearest whole number.
-  const rounded = useTransform(count, latest => Math.round(latest));
+  const rounded = useTransform(count, (latest) => Math.round(latest));
 
   // `displayText` is a transformed motion value of `rounded`, slicing the text to the current count.
-  const displayText = useTransform(rounded, latest => text.slice(0, latest));
+  const displayText = useTransform(rounded, (latest) => text.slice(0, latest));
 
   // `animationCompleted` is a state variable to keep track of whether the animation has completed.
   const [animationCompleted, setAnimationCompleted] = useState(false);
   useEffect(() => {
     const controls = animate(count, text.length, {
-      type: 'tween',
+      type: "tween",
       duration: 2,
       delay,
-      ease: 'linear',
-      onUpdate: latest => {
+      ease: "linear",
+      onUpdate: (latest) => {
         if (latest === text.length) {
           setAnimationCompleted(true);
         }
@@ -34,9 +34,9 @@ export const TextTypingAnim = ({ text, delay }: AnimatedTextProps) => {
     return controls.stop;
   }, []);
   return (
-    <div className={animationCompleted ? 'animation-completed' : ''}>
+    <div className={animationCompleted ? "animation-completed" : ""}>
       <motion.span>{displayText}</motion.span>
-      <CursorBlinker delay={delay}/>
+      <CursorBlinker delay={delay} />
     </div>
   );
 };

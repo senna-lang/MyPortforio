@@ -1,14 +1,14 @@
-import Image from 'next/image';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
+import Image from "next/image";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 type ImageProps = {
   images: string[];
 };
 
-export const Slider: React.FC<ImageProps> = props => {
+export const Slider: React.FC<ImageProps> = (props) => {
   return (
-    <div className=" h-full flex flex-col justify-center">
+    <div className=" flex h-full flex-col justify-center">
       <Splide
         aria-label="私のお気に入りの画像集"
         options={{

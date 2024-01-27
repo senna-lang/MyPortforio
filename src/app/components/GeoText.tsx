@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import { Text } from '@react-three/drei';
-import { Vector3 } from 'three';
-import { useFrame } from '@react-three/fiber';
-import { useWindowSize } from '../useWindowSize';
+import { Text } from "@react-three/drei";
+import { Vector3 } from "three";
+import { useFrame } from "@react-three/fiber";
+import { useWindowSize } from "../useWindowSize";
 
 export const Rig = ({ v = new Vector3() }) => {
-  return useFrame(state => {
+  return useFrame((state) => {
     state.camera.position.lerp(
       v.set(state.mouse.x / 6, state.mouse.y / 6, 10),
-      0.05
+      0.05,
     );
   });
 };
 
 export const Texts = (props: any) => {
   return (
-    <Text {...props} font="/robots.txt" color={'white'} letterSpacing={0.02}>
+    <Text {...props} font="/robots.txt" color={"white"} letterSpacing={0.02}>
       {props.text}
     </Text>
   );
@@ -29,12 +29,12 @@ const GeoText = () => {
       <Rig />
       <Texts
         position={[0, -0.8, width >= 768 ? 1 : -1.7]}
-        text={'Sena Inomata'}
+        text={"Sena Inomata"}
         fontSize={1.2}
       />
       <Texts
         position={[-1.4, -2.2, width >= 768 ? 1 : -1.7]}
-        text={'Portfolio'}
+        text={"Portfolio"}
         fontSize={1.2}
       />
     </>
