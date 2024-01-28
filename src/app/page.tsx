@@ -21,8 +21,8 @@ export default function Home() {
           height={400}
         />
       </div>
-      <div className="flex h-screen flex-col items-center bg-[#f4f6fc] lg:w-1/3">
-        <div className=" fixed left-9 top-6">
+      <div className="relative flex h-screen flex-col items-center bg-[#f4f6fc] lg:w-1/3">
+        <div className=" absolute left-9 top-6">
           <h1 className=" text-xl font-extrabold ">SENNA_lang</h1>
         </div>
         <div className="my-auto 2xl:opacity-0">
@@ -33,7 +33,7 @@ export default function Home() {
             height={400}
           />
         </div>
-        <div className="fixed bottom-6 flex gap-8">
+        <div className=" absolute bottom-6 flex gap-8">
           <Link href="https://github.com/senna-lang" target="_blank">
             <FaGithub className=" cursor-pointer text-2xl" />
           </Link>

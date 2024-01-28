@@ -5,8 +5,8 @@ import { FaInstagram } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
-    <div className="flex h-screen flex-col items-center justify-center bg-[#f4f6fc] lg:w-1/3">
-      <div className=" fixed left-9 top-6">
+    <div className="relative flex h-screen flex-col items-center justify-center bg-[#f4f6fc] lg:w-1/3">
+      <div className=" absolute left-9 top-6">
         <Link href="/" className=" text-xl font-extrabold ">
           SENNA_lang
         </Link>
@@ -15,7 +15,7 @@ const Sidebar = () => {
         <span className="block text-5xl">Sena Inomata</span>
         <span className="block text-5xl">Portfolio</span>
       </Link>
-      <div className="fixed bottom-6 flex gap-8">
+      <div className="absolute bottom-6 flex gap-8">
         <Link href="https://github.com/senna-lang" target="_blank">
           <FaGithub className=" cursor-pointer text-2xl" />
         </Link>
