@@ -19,6 +19,7 @@ export default function Home() {
           alt="profileImg"
           width={400}
           height={400}
+          priority
         />
       </div>
       <div className="relative flex h-screen flex-col items-center bg-[#f4f6fc] lg:w-1/3">
