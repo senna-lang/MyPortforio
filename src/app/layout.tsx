@@ -1,10 +1,10 @@
-import "./styles/mantineBase.css";
-import "./styles/globals.scss";
+import "../common/styles/mantineBase.css";
+import "../common/styles/globals.scss";
 import "@mantine/core/styles.css";
 import "@splidejs/react-splide/css";
 import type { Metadata } from "next";
-import { AppProvider } from "@/app/context/AppContext";
-import TransitionWrapper from "./components/animations/TransitionWrapper";
+import { AppProvider } from "@/common/context/AppContext";
+import TransitionWrapper from "../components/animations/TransitionWrapper";
 import { Roboto } from "next/font/google";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Header from "../components/layouts/Header";
-import Sidebar from "../features/portfolio/components/Sidebar";
+import Header from "../../components/layouts/Header";
+import Sidebar from "../../features/portfolio/components/Sidebar";
 
 export default function Contact() {
   return (

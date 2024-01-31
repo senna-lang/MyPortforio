@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useAppContext } from "@/app/context/AppContext";
-import * as Portfolio from "@/app/features/portfolio/components/index";
-import Header from "../components/layouts/Header";
-import FadeInWrapper from "../components/animations/FadeInWrapper";
+import { useAppContext } from "@/common/context/AppContext";
+import * as Portfolio from "@/features/portfolio/components/index";
+import Header from "../../components/layouts/Header";
+import FadeInWrapper from "../../components/animations/FadeInWrapper";
 
 export default function Works() {
   const {

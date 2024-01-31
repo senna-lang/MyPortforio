@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Slider } from "../../../../components/elements/Slider";
 import { Modal } from "@mantine/core";
-import { useAppContext } from "@/app/context/AppContext";
+import { useAppContext } from "@/common/context/AppContext";
 import NextjsLogo from "/public/logos/nextjs.svg";
 import TailwindLogo from "/public/logos/tailwind-css-2.svg";
 import TsLogo from "/public/logos/typescript.svg";

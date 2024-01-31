@@ -1,6 +1,6 @@
-import Header from "../components/layouts/Header";
-import Sidebar from "../features/portfolio/components/Sidebar";
-import { TextTypingAnim } from "../components/animations/TextTypingAnim";
+import Header from "../../components/layouts/Header";
+import Sidebar from "../../features/portfolio/components/Sidebar";
+import { TextTypingAnim } from "../../components/animations/TextTypingAnim";
 
 export default function Skill() {
   return (

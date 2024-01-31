@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Header from "./components/layouts/Header";
-import CanvasWrapper from "./components/geos/CanvasWrapper";
-import GeoStars from "./components/geos/GeoStars";
-import GeoText from "./components/geos/GeoText";
-import TopPageSidebar from "./features/portfolio/components/TopPageSidebar";
+import Header from "../components/layouts/Header";
+import CanvasWrapper from "../components/geos/CanvasWrapper";
+import GeoStars from "../components/geos/GeoStars";
+import GeoText from "../components/geos/GeoText";
+import TopPageSidebar from "../features/portfolio/components/TopPageSidebar";
 
 export default function Home() {
   return (
