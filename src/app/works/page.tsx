@@ -1,14 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
-import { useAppContext } from "@/context/AppContext";
-import PortfolioModal from "../components/modals/PortfolioModal";
-import VtsModal from "../components/modals/VtsModal";
-import NotionBlogModal from "../components/modals/NotionBlogModal";
-import EcSiteModal from "../components/modals/EcSiteModal";
-import TodoAppModal from "../components/modals/TodoAppModal";
+import { useAppContext } from "@/app/context/AppContext";
+import * as Portfolio from "@/app/features/portfolio/components/index";
+import Header from "../components/layouts/Header";
 import FadeInWrapper from "../components/animations/FadeInWrapper";
 
 export default function Works() {
@@ -21,7 +16,7 @@ export default function Works() {
   } = useAppContext();
   return (
     <div className="min-h-screen w-full lg:flex">
-      <Sidebar />
+      <Portfolio.Sidebar />
       <div className="h-auto bg-[#01060f] lg:h-screen lg:w-2/3">
         <Header />
         <div className="mx-12 flex flex-col justify-center py-8 text-slate-300 lg:mt-4 xl:mx-24 xl:mt-24">
@@ -105,11 +100,11 @@ export default function Works() {
           </div>
         </div>
       </div>
-      <VtsModal />
-      <NotionBlogModal />
-      <PortfolioModal />
-      <EcSiteModal />
-      <TodoAppModal />
+      <Portfolio.VtsModal />
+      <Portfolio.NotionBlogModal />
+      <Portfolio.PortfolioModal />
+      <Portfolio.EcSiteModal />
+      <Portfolio.TodoAppModal />
     </div>
   );
 }

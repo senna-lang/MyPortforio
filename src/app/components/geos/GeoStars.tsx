@@ -3,7 +3,7 @@ import { Stars } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import { Group } from "three";
-import { useAppContext } from "@/context/AppContext";
+import { useAppContext } from "@/app/context/AppContext";
 
 const GeoStars = () => {
   const starRef = useRef<Group>(null!);

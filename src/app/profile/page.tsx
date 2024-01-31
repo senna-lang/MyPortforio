@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
+import Header from "../components/layouts/Header";
+import Sidebar from "../features/portfolio/components/Sidebar";
 
 export default function Profile() {
   return (

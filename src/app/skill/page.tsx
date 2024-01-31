@@ -1,6 +1,5 @@
-import Link from "next/link";
-import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
+import Header from "../components/layouts/Header";
+import Sidebar from "../features/portfolio/components/Sidebar";
 import { TextTypingAnim } from "../components/animations/TextTypingAnim";
 
 export default function Skill() {

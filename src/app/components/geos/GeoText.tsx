@@ -3,7 +3,7 @@
 import { Text } from "@react-three/drei";
 import { Vector3 } from "three";
 import { useFrame } from "@react-three/fiber";
-import { useWindowSize } from "../useWindowSize";
+import { useWindowSize } from "../../utils/useWindowSize";
 
 export const Rig = ({ v = new Vector3() }) => {
   return useFrame((state) => {

@@ -1,30 +1,28 @@
 "use client";
-
 import Link from "next/link";
-import { Slider } from "../Slider";
+import { Slider } from "../../../../components/elements/Slider";
 import { Modal } from "@mantine/core";
-import { useAppContext } from "@/context/AppContext";
+import { useAppContext } from "@/app/context/AppContext";
 import NextjsLogo from "/public/logos/nextjs.svg";
 import TailwindLogo from "/public/logos/tailwind-css-2.svg";
 import TsLogo from "/public/logos/typescript.svg";
+import GithubLogo from "/public/logos/github-actions-seeklogo.svg";
+import NotionLogo from "/public/logos/Notion-logo.svg";
 import VercelLogo from "/public/logos/logo-vercel-svgrepo-com.svg";
-import FirebaseLogo from "/public/logos/logo-vertical.svg";
-import OpeniaLogo from "/public//logos/openai-svgrepo-com.svg";
 import { BsGithub } from "react-icons/bs";
 
-const VtsModal = () => {
-  const { isVtsModalOpen, setIsVtsModalOpen } = useAppContext();
+const NotionBlogModal = () => {
+  const { isNotionModalOpen, setIsNotionModalOpen } = useAppContext();
 
   const notionImages: string[] = [
-    "/slider/VTS1.png",
-    "/slider/VTS2.png",
-    "/slider/VTS3.png",
-    "/slider/VTS4.png",
+    "/slider/Notion1.jpg",
+    "/slider/Notion2.png",
+    "/slider/Notion3.png",
   ];
   return (
     <Modal
-      opened={isVtsModalOpen}
-      onClose={() => setIsVtsModalOpen(false)}
+      opened={isNotionModalOpen}
+      onClose={() => setIsNotionModalOpen(false)}
       size="90%"
       transitionProps={{
         transition: "scale",
@@ -32,17 +30,17 @@ const VtsModal = () => {
         timingFunction: "linear",
       }}
     >
-      <div className=" modal flex flex-col xl:flex-row">
+      <div className=" modal flex flex-col leading-6 xl:flex-row">
         <div className=" p-5 xl:w-1/3">
-          <h2 className=" mb-3 text-center text-2xl">VTS</h2>
-          <p className=" mb-4 px-5">
-            MP3,MP4,M4Aの音声ファイルをffmpegでMP3に変換してWhisperが文字起こしをします。その文章をChatGPTに要約してもらう、というのが主な機能となります。Voice-Transcript-Summarizeの頭文字をとってVTSと名付けました。作成された文字起こしと要約テキストはFireBaseのFireStoreに保存することができ、ダッシュボードから閲覧できます。また、ユーザー認証もFireBaseのAuthenticationを採用しています。SPAなのでログインすればダッシュボードから新しい要約を作ったり、保存したテキストの一覧を閲覧するなど全てのアクションが可能です。
+          <h2 className=" mb-3 text-center text-2xl">Notion Blog</h2>
+          <p className=" mb-2 px-5">
+            notionのdatabaseに記事を書いてそのままブログに投稿できるNotionBlogです。私自身のブログとして実際に運用して行くことを想定して作りました。Notion自体は以前から簡単なメモからタスク管理など日頃からよく触るものであり、Notionで記事を書いてそのままブログにアップロードできるというのは日々のルーティンワークに取り入れやすく、記事を書いて投稿するハードルが下がるのではと言う思いから作りました。
             <Link
-              className="text-blue-500"
-              href="https://nextjs-myblog.vercel.app/articles/VTS"
+              className=" text-blue-500"
+              href="https://senna-notionblog.vercel.app/articles/notionblog"
               target="_blank"
             >
-              ブログへ続く
+              ブログ続く
             </Link>
           </p>
           <ul className="mb-4 px-5">
@@ -50,16 +48,16 @@ const VtsModal = () => {
               <span>Domain: </span>
               <Link
                 className=" text-blue-500"
-                href="https://voice-transcript-summarize.vercel.app/"
+                href="https://senna-notionblog.vercel.app/"
                 target="_blank"
               >
-                https://voice-transcript-summarize.vercel.app/
+                https://senna-notionblog.vercel.app
               </Link>
             </li>
             <li>
               <Link
                 className="flex items-center gap-1"
-                href="https://github.com/senna-lang/Voice-Transcript-summarize"
+                href="https://github.com/senna-lang/MyNotionBlog"
                 target="_blank"
               >
                 Repository
@@ -92,17 +90,10 @@ const VtsModal = () => {
             </Link>
             <Link
               className=" cursor-pointer"
-              href="https://openai.com/"
+              href="https://www.notion.so/ja-jp"
               target="_blank"
             >
-              <OpeniaLogo className="h-14 w-14" />
-            </Link>
-            <Link
-              className=" cursor-pointer"
-              href="https://firebase.google.com/?hl=ja"
-              target="_blank"
-            >
-              <FirebaseLogo className="h-14 w-14" />
+              <NotionLogo className="h-14 w-14" />
             </Link>
             <Link
               className=" cursor-pointer"
@@ -133,6 +124,13 @@ const VtsModal = () => {
             </Link>
             <Link
               className=" cursor-pointer"
+              href="https://github.co.jp/features/actions"
+              target="_blank"
+            >
+              <GithubLogo className="h-14 w-14" />
+            </Link>
+            <Link
+              className=" cursor-pointer"
               href="https://vercel.com/"
               target="_blank"
             >
@@ -148,4 +146,4 @@ const VtsModal = () => {
   );
 };
 
-export default VtsModal;
+export default NotionBlogModal;

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ScaleUp } from "./animations/ScaleUp";
+import { ScaleUp } from "../animations/ScaleUp";
 import { useDisclosure } from "@mantine/hooks";
 import { Burger, Drawer } from "@mantine/core";
 

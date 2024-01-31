@@ -11,18 +11,17 @@ export default function TransitionWrapper({
   const pathName = usePathname();
 
   return (
-    // アンマウント時の動きをつけるために必要な記述
     <AnimatePresence mode="wait">
       <motion.div
         key={pathName}
-        initial={{ opacity: 0 }} //初期状態
+        initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
           transition: {
             duration: 3,
           },
-        }} // マウント時
-        exit={{ opacity: 0 }} // アンマウント時
+        }} 
+        exit={{ opacity: 0 }} 
       >
         {children}
       </motion.div>
