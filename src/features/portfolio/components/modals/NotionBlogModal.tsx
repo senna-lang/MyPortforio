@@ -40,7 +40,7 @@ const NotionBlogModal = () => {
               href="https://senna-notionblog.vercel.app/articles/notionblog"
               target="_blank"
             >
-              ブログ続く
+              ブログへ続く
             </Link>
           </p>
           <ul className="mb-4 px-5">

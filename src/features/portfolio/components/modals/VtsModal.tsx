@@ -39,7 +39,7 @@ const VtsModal = () => {
             MP3,MP4,M4Aの音声ファイルをffmpegでMP3に変換してWhisperが文字起こしをします。その文章をChatGPTに要約してもらう、というのが主な機能となります。Voice-Transcript-Summarizeの頭文字をとってVTSと名付けました。作成された文字起こしと要約テキストはFireBaseのFireStoreに保存することができ、ダッシュボードから閲覧できます。また、ユーザー認証もFireBaseのAuthenticationを採用しています。SPAなのでログインすればダッシュボードから新しい要約を作ったり、保存したテキストの一覧を閲覧するなど全てのアクションが可能です。
             <Link
               className="text-blue-500"
-              href="https://nextjs-myblog.vercel.app/articles/VTS"
+              href="https://senna-notionblog.vercel.app/articles/VTS"
               target="_blank"
             >
               ブログへ続く
