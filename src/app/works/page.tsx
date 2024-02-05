@@ -27,7 +27,7 @@ export default function Works() {
             <FadeInWrapper delay={0}>
               <div className="before: relative mb-2 pt-[56.25%] before:block before:content-['']">
                 <Image
-                  src="https://placehold.jp/350x260.png"
+                  src="/slider/Portfolio1.png"
                   alt="worksImg"
                   width={243}
                   height={137}
