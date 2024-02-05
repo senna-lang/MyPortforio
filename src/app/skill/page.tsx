@@ -61,7 +61,7 @@ export default function Skill() {
                 <TextTypingAnim text="AWS" delay={0} />
               </li>
               <li>
-                <TextTypingAnim text="Three,js" delay={2} />
+                <TextTypingAnim text="Storybook" delay={2} />
               </li>
               <li></li>
             </ul>
