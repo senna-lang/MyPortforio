@@ -14,7 +14,7 @@ export default function Contact() {
           </div>
           <div className=" mb-1 flex gap-6">
             <h2>email : </h2>
-            <p>asrsena@outlook.jp</p>
+            <Link href='mailto:asrsena@outlook.jp'>asrsena@outlook.jp</Link>
           </div>
           <div className=" mb-1 flex gap-6">
             <h2>Wantedly : </h2>
