@@ -10,7 +10,7 @@ import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 
 export const metadata: Metadata = {
   title: "SENA Portfolio",
-  description: "SENA Portfolio 2024",
+  description: "SENA Portfolio 23-24",
 };
 
 const roboto = Roboto({
