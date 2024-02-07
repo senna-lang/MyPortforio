@@ -11,7 +11,7 @@ export default function Profile() {
         <div className=" mx-12 flex flex-col-reverse items-center justify-center py-8 text-slate-300 md:py-16 lg:mx-24 lg:mt-24 xl:flex-row xl:items-start">
           <div className="lg:hidden xl:block xl:w-1/2">
             <Image
-              src="/profileImage.jpeg"
+              src="/images/profileImage.jpeg"
               alt="profileImg"
               width={400}
               height={400}

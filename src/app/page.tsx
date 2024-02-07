@@ -10,7 +10,7 @@ export default function Home() {
     <div className="relative min-h-screen w-full lg:flex">
       <div className=" absolute top-48 z-10 opacity-0 2xl:left-[calc(33.3%-200px)] 2xl:opacity-100">
         <Image
-          src="/profileImage.jpeg"
+          src="/images/profileImage.jpeg"
           alt="profileImg"
           width={400}
           height={400}
