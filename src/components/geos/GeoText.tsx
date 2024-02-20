@@ -16,7 +16,7 @@ export const Rig = ({ v = new Vector3() }) => {
 
 export const Texts = (props: any) => {
   return (
-    <Text {...props} font="/robots.txt" color={"white"} letterSpacing={0.02}>
+    <Text {...props} font="/public/fonts/robots.txt" color={"white"} letterSpacing={0.02}>
       {props.text}
     </Text>
   );
