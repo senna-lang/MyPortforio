@@ -1,6 +1,6 @@
 "use client";
 
-import { Text } from "@react-three/drei";
+import { Text3D } from "@react-three/drei";
 import { Vector3 } from "three";
 import { useFrame } from "@react-three/fiber";
 import { useWindowSize } from "../../common/utils/useWindowSize";
@@ -24,9 +24,10 @@ export const Rig = ({ v = new Vector3() }) => {
 
 export const Texts = (props: TextProps) => {
   return (
-    <Text {...props} font="/public/fonts/robots.txt" color={"white"} letterSpacing={0.02}>
+    <Text3D {...props} font="/fonts/Roboto_Bold.json" letterSpacing={0.02}>
       {props.text}
-    </Text>
+      <meshBasicMaterial wireframe />
+    </Text3D>
   );
 };
 
@@ -36,15 +37,16 @@ const GeoText = () => {
     <>
       <Rig />
       <Texts
-        position={[0, -0.8, width >= 768 ? 1 : -1.7]}
+        position={[-5, -0.8, width >= 768 ? 1 : -4.5]}
         text={"Sena Inomata"}
         fontSize={1.2}
       />
       <Texts
-        position={[-1.4, -2.2, width >= 768 ? 1 : -1.7]}
+        position={[-5, -2.2, width >= 768 ? 1 : -4.5]}
         text={"Portfolio"}
         fontSize={1.2}
       />
+      {/* <Text3D font='/fonts/Roboto_Bold.json'>OK</Text3D> */}
     </>
   );
 };
