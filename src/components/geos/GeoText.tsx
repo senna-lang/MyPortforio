@@ -5,6 +5,14 @@ import { Vector3 } from "three";
 import { useFrame } from "@react-three/fiber";
 import { useWindowSize } from "../../common/utils/useWindowSize";
 
+type Position = [number, number, number];
+
+interface TextProps {
+  position: Position;
+  text: string;
+  fontSize: number;
+}
+
 export const Rig = ({ v = new Vector3() }) => {
   return useFrame((state) => {
     state.camera.position.lerp(
@@ -14,7 +22,7 @@ export const Rig = ({ v = new Vector3() }) => {
   });
 };
 
-export const Texts = (props: any) => {
+export const Texts = (props: TextProps) => {
   return (
     <Text {...props} font="/public/fonts/robots.txt" color={"white"} letterSpacing={0.02}>
       {props.text}
