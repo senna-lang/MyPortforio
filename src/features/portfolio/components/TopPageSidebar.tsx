@@ -12,7 +12,7 @@ const TopPageSidebar = () => {
    </div>
    <div className="my-auto 2xl:opacity-0">
      <Image
-       src="/9803D0FA-E299-4F31-89B7-89D54B569EB4.jpeg"
+       src="/images/profileImage.jpeg"
        alt="profileImg"
        width={400}
        height={400}
