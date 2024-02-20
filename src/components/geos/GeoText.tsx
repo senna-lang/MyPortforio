@@ -9,7 +9,7 @@ export const Rig = ({ v = new Vector3() }) => {
   return useFrame((state) => {
     state.camera.position.lerp(
       v.set(state.mouse.x / 6, state.mouse.y / 6, 10),
-      0.05,
+      0.1,
     );
   });
 };

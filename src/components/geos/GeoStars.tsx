@@ -1,5 +1,5 @@
 "use client";
-import { Stars } from "@react-three/drei";
+import { OrbitControls, Stars } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import { Group } from "three";
@@ -24,6 +24,7 @@ const GeoStars = () => {
           saturation={10}
           fade
         />
+        <OrbitControls/>
       </group>
     </>
   );
