@@ -16,6 +16,7 @@ const TopPageSidebar = () => {
        alt="profileImg"
        width={400}
        height={400}
+       priority
      />
    </div>
    <div className=" absolute bottom-6 flex gap-8">
