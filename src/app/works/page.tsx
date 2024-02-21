@@ -21,7 +21,9 @@ export default function Works() {
         <Header />
         <div className="mx-12 flex flex-col justify-center py-8 text-slate-300 lg:mt-4 xl:mx-24 xl:mt-24">
           <div className=" mb-10">
-            <h2 className=" text-5xl">Works</h2>
+            <FadeInWrapper delay={0}>
+              <h2 className=" text-5xl">Works</h2>
+            </FadeInWrapper>
           </div>
           <div className="mb-8 grid grid-cols-1 items-center gap-2 sm:grid-cols-2 lg:grid-cols-3">
             <FadeInWrapper delay={0}>
@@ -66,7 +68,9 @@ export default function Works() {
             </FadeInWrapper>
           </div>
           <div className=" mb-10">
-            <h2 className=" text-5xl">Recently Practice</h2>
+            <FadeInWrapper delay={0}>
+              <h2 className=" text-5xl">Recently Practice</h2>
+            </FadeInWrapper>
           </div>
           <div className="grid grid-cols-1 items-center gap-2 sm:grid-cols-2 xl:grid-cols-3">
             <FadeInWrapper delay={0}>
