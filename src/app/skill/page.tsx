@@ -8,13 +8,13 @@ export default function Skill() {
       <Sidebar />
       <div className="h-screen bg-[#01060f] lg:w-2/3">
         <Header />
-        <div className=" mx-16 mt-36 flex flex-col justify-center p-8 text-slate-300 xl:mx-24">
+        <div className=" mx-4 mt-36 flex flex-col justify-center p-8 text-slate-300 sm:mx-16 xl:mx-24">
           <div className=" mb-10">
             <h1 className=" text-5xl">Skill set</h1>
           </div>
           <div className=" mb-1 flex gap-12">
             <h2>Language</h2>
-            <ul className=" flex gap-3">
+            <ul className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-3">
               <li>
                 <TextTypingAnim text="Javascript" delay={0} />
               </li>
@@ -25,7 +25,7 @@ export default function Skill() {
           </div>
           <div className=" mb-1 flex gap-12">
             <h2>Library / Framework</h2>
-            <ul className=" flex gap-3">
+            <ul className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-3">
               <li>
                 <TextTypingAnim text="React" delay={0} />
               </li>
@@ -36,7 +36,7 @@ export default function Skill() {
           </div>
           <div className=" mb-1 flex gap-12">
             <h2>Other</h2>
-            <ul className="grid grid-cols-3 gap-1 md:flex md:gap-3">
+            <ul className="grid grid-cols-1 gap-1 sm:grid-cols-5 sm:gap-3">
               <li>
                 <TextTypingAnim text="FireBase" delay={0} />
               </li>

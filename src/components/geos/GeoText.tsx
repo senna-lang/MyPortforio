@@ -16,7 +16,7 @@ interface TextProps {
 export const Rig = ({ v = new Vector3() }) => {
   return useFrame((state) => {
     state.camera.position.lerp(
-      v.set(state.mouse.x / 0.6, state.mouse.y / 0.6, 10),
+      v.set(state.mouse.x / 0.9, state.mouse.y / 0.9, 10),
       0.1,
     );
   });
@@ -46,7 +46,6 @@ const GeoText = () => {
         text={"Portfolio"}
         fontSize={1.2}
       />
-      {/* <Text3D font='/fonts/Roboto_Bold.json'>OK</Text3D> */}
     </>
   );
 };

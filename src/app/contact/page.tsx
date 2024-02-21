@@ -8,15 +8,15 @@ export default function Contact() {
       <Sidebar />
       <div className="h-screen bg-[#01060f] lg:w-2/3">
         <Header />
-        <div className=" mx-24 mt-36 flex flex-col justify-center p-8 text-slate-300">
+        <div className="mx-4 mt-36 flex flex-col justify-center p-8 text-slate-300 sm:mx-16 xl:mx-24">
           <div className=" mb-10">
             <h1 className=" text-5xl">Contact</h1>
           </div>
-          <div className=" mb-1 flex gap-6">
+          <div className=" mb-1 sm:flex sm:gap-6">
             <h2>email : </h2>
-            <Link href='mailto:asrsena@outlook.jp'>asrsena@outlook.jp</Link>
+            <Link href="mailto:asrsena@outlook.jp">asrsena@outlook.jp</Link>
           </div>
-          <div className=" mb-1 flex gap-6">
+          <div className=" mb-1 truncate sm:flex sm:gap-6">
             <h2>Wantedly : </h2>
             <Link
               href="https://www.wantedly.com/id/sena_inomata_ss"
@@ -25,7 +25,7 @@ export default function Contact() {
               https://www.wantedly.com/id/sena_inomata_ss
             </Link>
           </div>
-          <div className=" mb-1 flex gap-6">
+          <div className=" mb-1 sm:flex sm:gap-6">
             <h2>Green : </h2>
             <Link
               href="https://www.green-japan.com/profiles/show"
