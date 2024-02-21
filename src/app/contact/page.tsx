@@ -4,9 +4,9 @@ import Sidebar from "../../features/portfolio/components/Sidebar";
 
 export default function Contact() {
   return (
-    <div className="relative flex min-h-screen w-full">
+    <div className="relative min-h-screen w-full lg:flex">
       <Sidebar />
-      <div className="h-screen w-2/3 bg-[#01060f]">
+      <div className="h-screen bg-[#01060f] lg:w-2/3">
         <Header />
         <div className=" mx-24 mt-36 flex flex-col justify-center p-8 text-slate-300">
           <div className=" mb-10">
